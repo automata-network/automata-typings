@@ -6,7 +6,7 @@
   "scripts": {
     "build": "yarn generate:defs && yarn generate:meta:fst",
     "generate:defs": "ts-node --skip-project node_modules/.bin/polkadot-types-from-defs --package automata-typings/interfaces --input ./src/interfaces",
-    "generate:meta:fst": "ts-node --skip-project node_modules/.bin/polkadot-types-from-chain --package automata-typings/interfaces --endpoint ./finitestate.json --output ./src/interfaces",
+    "generate:meta:fst": "ts-node --skip-project node_modules/.bin/polkadot-types-from-chain --package automata-typings/interfaces --endpoint ./fst.json --output ./src/interfaces",
     "lint": "tsc --noEmit --pretty"
   },
   "dependencies": {
