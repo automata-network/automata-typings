@@ -60,7 +60,7 @@ import type { Multisig, Timepoint } from '@polkadot/types/interfaces/utility';
 import type { VestingInfo } from '@polkadot/types/interfaces/vesting';
 import type { AssetInstance, AssetInstanceV0, AssetInstanceV1, AssetInstanceV2, BodyId, BodyPart, DoubleEncodedCall, Fungibility, FungibilityV0, FungibilityV1, FungibilityV2, InboundStatus, InstructionV2, InteriorMultiLocation, Junction, JunctionV0, JunctionV1, JunctionV2, Junctions, JunctionsV1, JunctionsV2, MultiAsset, MultiAssetFilter, MultiAssetFilterV1, MultiAssetFilterV2, MultiAssetV0, MultiAssetV1, MultiAssetV2, MultiAssets, MultiAssetsV1, MultiAssetsV2, MultiLocation, MultiLocationV0, MultiLocationV1, MultiLocationV2, NetworkId, OriginKindV0, OriginKindV1, OriginKindV2, OutboundStatus, Outcome, QueryId, QueryStatus, QueueConfigData, Response, ResponseV0, ResponseV1, ResponseV2, ResponseV2Error, ResponseV2Result, VersionMigrationStage, VersionedMultiAsset, VersionedMultiAssets, VersionedMultiLocation, VersionedResponse, VersionedXcm, WeightLimitV2, WildFungibility, WildFungibilityV0, WildFungibilityV1, WildFungibilityV2, WildMultiAsset, WildMultiAssetV1, WildMultiAssetV2, Xcm, XcmAssetId, XcmError, XcmErrorV0, XcmErrorV1, XcmErrorV2, XcmOrder, XcmOrderV0, XcmOrderV1, XcmOrderV2, XcmOrigin, XcmOriginKind, XcmV0, XcmV1, XcmV2, XcmVersion, XcmpMessageFormat } from '@polkadot/types/interfaces/xcm';
 import type { BridgeChainId, BridgeTokenId, DepositNonce, ProposalStatus, ProposalVotes, ResourceId } from 'automata-typings/interfaces/chainbridge';
-import type { Chain, ChainIndex, CrossChainAccount, DAOProposal, DAOProposalState, DAOProposalStatus, IpfsHash, OptionIndex, PrivacyLevel, Project, ProjectId, ProposalId, Protocol, SolidityStrategy, Strategy, SubstrateStrategy, VoteUpdate, VotingFormat, VotingPower, Workspace } from 'automata-typings/interfaces/daoportal';
+import type { Chain, ChainIndex, CrossChainAccount, DAOProposal, DAOProposalState, IpfsHash, OptionIndex, PrivacyLevel, Project, ProjectId, ProposalId, Protocol, SolidityStrategy, Strategy, SubstrateStrategy, UserGroup, VoteUpdate, VotingFormat, VotingPower, Workspace } from 'automata-typings/interfaces/daoportal';
 
 declare module '@polkadot/types/types/registry' {
   export interface InterfaceTypes {
@@ -297,7 +297,6 @@ declare module '@polkadot/types/types/registry' {
     CrossChainAccount: CrossChainAccount;
     DAOProposal: DAOProposal;
     DAOProposalState: DAOProposalState;
-    DAOProposalStatus: DAOProposalStatus;
     Data: Data;
     DeferredOffenceOf: DeferredOffenceOf;
     DefunctVoter: DefunctVoter;
@@ -1047,6 +1046,7 @@ declare module '@polkadot/types/types/registry' {
     UpgradeGoAhead: UpgradeGoAhead;
     UpgradeRestriction: UpgradeRestriction;
     UpwardMessage: UpwardMessage;
+    UserGroup: UserGroup;
     usize: usize;
     USize: USize;
     ValidationCode: ValidationCode;
