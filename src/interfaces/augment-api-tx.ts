@@ -417,7 +417,7 @@ declare module '@polkadot/api-base/types/submittable' {
     };
     daoPortal: {
       addProject: AugmentedSubmittable<(project: Project | { usergroup?: any; data?: any; workspaces?: any } | string | Uint8Array) => SubmittableExtrinsic<ApiType>, [Project]>;
-      addProposal: AugmentedSubmittable<(projectId: ProjectId | AnyNumber | Uint8Array, proposal: DAOProposal | { _author?: any; _voting_format?: any; _option_count?: any; _data?: any; _privacy?: any; _start?: any; _end?: any; _frequency?: any; state?: any } | string | Uint8Array) => SubmittableExtrinsic<ApiType>, [ProjectId, DAOProposal]>;
+      addProposal: AugmentedSubmittable<(projectId: ProjectId | AnyNumber | Uint8Array, proposal: DAOProposal | { _author?: any; _voting_format?: any; _option_count?: any; _data?: any; _privacy?: any; _start?: any; _end?: any; _frequency?: any; _workspaces?: any; state?: any } | string | Uint8Array) => SubmittableExtrinsic<ApiType>, [ProjectId, DAOProposal]>;
       cleanData: AugmentedSubmittable<() => SubmittableExtrinsic<ApiType>, []>;
       registerChain: AugmentedSubmittable<(chain: Chain | { _protocol?: any } | string | Uint8Array) => SubmittableExtrinsic<ApiType>, [Chain]>;
       updateProject: AugmentedSubmittable<(projectId: ProjectId | AnyNumber | Uint8Array, project: Project | { usergroup?: any; data?: any; workspaces?: any } | string | Uint8Array) => SubmittableExtrinsic<ApiType>, [ProjectId, Project]>;

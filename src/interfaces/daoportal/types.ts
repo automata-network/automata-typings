@@ -31,13 +31,14 @@ export interface DAOProposal extends Struct {
   readonly _start: u64;
   readonly _end: u64;
   readonly _frequency: Option<u64>;
+  readonly _workspaces: Vec<Workspace>;
   readonly state: DAOProposalState;
 }
 
 /** @name DAOProposalState */
 export interface DAOProposalState extends Struct {
   readonly finalized: bool;
-  readonly snapshots: Vec<U256>;
+  readonly snapshots: Vec<Option<U256>>;
   readonly blacklisted: bool;
   readonly votes: Vec<VotingPower>;
   readonly pub_voters: Option<IpfsHash>;
