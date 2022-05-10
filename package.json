@@ -1,6 +1,6 @@
 {
   "name": "automata-typings",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "description": "automata type definitions",
   "main": "index.js",
   "scripts": {

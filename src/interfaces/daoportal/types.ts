@@ -1,7 +1,8 @@
 // Auto-generated via `yarn polkadot-types-from-defs`, do not edit
 /* eslint-disable */
 
-import type { Enum, Option, Struct, Text, U256, Vec, bool, u32, u64, u8 } from '@polkadot/types-codec';
+import type { Bytes, Enum, Option, Struct, Text, U256, Vec, bool, u32, u64, u8 } from '@polkadot/types-codec';
+import type { ITuple } from '@polkadot/types-codec/types';
 import type { AccountId, H160 } from '@polkadot/types/interfaces/runtime';
 
 /** @name Chain */
@@ -87,8 +88,8 @@ export interface SolidityStrategy extends Enum {
   readonly isErc20Balance: boolean;
   readonly asErc20Balance: H160;
   readonly isCustom: boolean;
-  readonly asCustom: [IpfsHash, Vec<u8>];
-  readonly type: 'Erc20Balance' | '(IpfsHash, Vec<u8>)';
+  readonly asCustom: ITuple<[IpfsHash, Bytes]>;
+  readonly type: 'Erc20Balance' | 'Custom';
 }
 
 /** @name Strategy */
@@ -103,10 +104,9 @@ export interface Strategy extends Enum {
 /** @name SubstrateStrategy */
 export interface SubstrateStrategy extends Enum {
   readonly isNativeBalance: boolean;
-  readonly asNativeBalance: null;
   readonly isCustom: boolean;
-  readonly asCustom: [IpfsHash, Vec<u8>];
-  readonly type: 'NativeBalance' | '(IpfsHash, Vec<u8>)';
+  readonly asCustom: ITuple<[IpfsHash, Bytes]>;
+  readonly type: 'NativeBalance' | 'Custom';
 }
 
 /** @name UserGroup */
