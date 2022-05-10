@@ -87,7 +87,7 @@ export interface SolidityStrategy extends Enum {
   readonly isErc20Balance: boolean;
   readonly asErc20Balance: H160;
   readonly isCustom: boolean;
-  readonly asCustom: '(IpfsHash, Vec<u8>)';
+  readonly asCustom: [IpfsHash, Vec<u8>];
   readonly type: 'Erc20Balance' | '(IpfsHash, Vec<u8>)';
 }
 
@@ -105,7 +105,7 @@ export interface SubstrateStrategy extends Enum {
   readonly isNativeBalance: boolean;
   readonly asNativeBalance: null;
   readonly isCustom: boolean;
-  readonly asCustom: '(IpfsHash, Vec<u8>)';
+  readonly asCustom: [IpfsHash, Vec<u8>];
   readonly type: 'NativeBalance' | '(IpfsHash, Vec<u8>)';
 }
 
