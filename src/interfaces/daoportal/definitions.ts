@@ -23,11 +23,15 @@ const daoPortalDefs = {
     IpfsHash: 'Text',
     SolidityStrategy: {
       _enum: {
-        ERC20Balance: 'H160'
+        ERC20Balance: 'H160',
+        Custom: '(IpfsHash, Vec<u8>)'
       }
     },
     SubstrateStrategy: {
-      _enum: ['NativeBalance']
+      _enum: {
+        NativeBalance: 'Null',
+        Custom: '(IpfsHash, Vec<u8>)'
+      }
     },
     Strategy: {
       _enum: {
